@@ -1,7 +1,7 @@
 #include "main.h"
 void execArgs(char **parsed)
 {
-	pid_t pid = fork;
+	pid_t pid = fork();
 
 	if (pid == -1)
 	{
