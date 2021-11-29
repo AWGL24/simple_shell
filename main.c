@@ -5,8 +5,6 @@ int main(void)
 	char *parsedArgs[MAXLIST];
 	int execFlag = 0;
 
-	init_shell();
-
 	while (1)
 	{
 		print_line();
