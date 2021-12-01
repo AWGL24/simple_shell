@@ -8,12 +8,4 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <signal.h>
-int takeInput(char *str);
-void print_line(void);
-void execArgs(char **parsed);
-void execArgsPiped(char **parsed, char **parsedpipe);
-int ownCmdHandler(char **parsed);
-int parsePipe(char *str, char **strpiped);
-void parseSpace(char *str, char **parsed);
-int processString(char *str, char **parsed, char **parsedpipe);
 #endif /* SHELL_H */
