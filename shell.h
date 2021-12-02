@@ -8,7 +8,5 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <signal.h>
-void *_realloc(void *ptr, size_t size);
-void SH_loop(void);
-int _putchar(char c);
+int main(int ac __attribute__((unused)), char **av __attribute__((unused)));
 #endif /* SHELL_H */

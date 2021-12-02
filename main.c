@@ -1,6 +1,13 @@
 #include "shell.h"
-int main(int argc, char **argv)
+int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 {
-	shell_loop();
-	return EXIT_SUCCESS;
+	while (int_mode)
+	{
+		int_mode = isatty(STDIN_FILENO);
+
+		if (int_mode == 1)
+		{
+			write(STDOUT_FILENO, "$ ", 13);
+		}
+	}
 }
