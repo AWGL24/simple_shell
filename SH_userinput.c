@@ -1,4 +1,10 @@
 #include "shell.h"
+
+/**
+ *userinput - The program evaluates the input of the user
+ *Return: the command the user input
+ */
+
 char *userinput(void)
 {
 	size_t size = 0;
@@ -22,5 +28,5 @@ char *userinput(void)
 	}
 	_strcpy(command, buffer);
 	free(buffer);
-	return(command);
+	return (command);
 }
