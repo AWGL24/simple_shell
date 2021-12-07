@@ -1,4 +1,10 @@
 #include "shell.h"
+
+/**
+ *main - Program works based on the user input of the user
+ *Return: EXIT_SUCCESS
+ */
+
 int main(void)
 {
 	char *str;
