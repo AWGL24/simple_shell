@@ -1,13 +1,18 @@
 #include "shell.h"
-int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
+int main(void)
 {
-	while (int_mode)
-	{
-		int_mode = isatty(STDIN_FILENO);
+	char *str;
+	char **strcm;
+	int stat;
 
-		if (int_mode == 1)
-		{
-			write(STDOUT_FILENO, "$ ", 13);
-		}
-	}
+	do {
+		write(1, "~$ ", 3);
+		str = userinput();
+		strcm = SH_splitline(str);
+		stat = SH_execute(strcm);
+		free(str);
+		free(strcm);
+	} while (stat);
+
+	return (EXIT_SUCCESS);
 }
