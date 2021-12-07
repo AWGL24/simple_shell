@@ -1,1 +1,0 @@
-rgumetnos, proccess funcitons
