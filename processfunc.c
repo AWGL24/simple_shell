@@ -1,2 +1,0 @@
-fork and exit function
-
