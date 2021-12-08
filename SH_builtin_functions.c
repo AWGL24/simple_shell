@@ -5,14 +5,14 @@ int _builtin_function(char **args)
 	pid_t pid;
 	int status;
 
-	pid = fork();
-
 	builtin commands[] = {
 		{"ls", "/bin/ls"},
 		{"env", "/bin/env"},
 		{"cat", "/bin/cat"},
 		{NULL, NULL}
 	};
+
+	pid = fork();
 
 	while (commands[idx].cm != NULL)
 	{
