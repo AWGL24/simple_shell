@@ -1,4 +1,10 @@
 #include "shell.h"
+
+/**
+ *_puts - putchar function
+ *@str: a pointer to a string
+ */
+
 void _puts(char *str)
 {
 	while (*str)
@@ -6,6 +12,13 @@ void _puts(char *str)
 
 	_putchar('\n');
 }
+
+/**
+ *_strcpy - copy string
+ *@dest: destination
+ *@src: string
+ *Return: destination
+ */
 
 char *_strcpy(char *dest, char *src)
 {
@@ -26,11 +39,17 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 
+/**
+ *_strcmp - compresion of a string
+ *@s1: string 1
+ *@s2: string 2
+ *Return: success
+ */
+
 int _strcmp(char *s1, char *s2)
 {
 	int i;
 
-	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
@@ -41,6 +60,12 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+/**
+ *_strlen - length of a string
+ *@str: string
+ *Return: success
+ */
 
 int _strlen(char *str)
 {
