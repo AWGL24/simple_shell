@@ -1,4 +1,11 @@
 #include "shell.h"
+
+/**
+ *_builtin_function - This prograsm evaluates the commands that of
+ *the user input.
+ *@args: is the userintput
+ *Return: success.
+ */
 int _builtin_function(char **args)
 {
 	int idx = 0;
