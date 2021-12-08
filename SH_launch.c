@@ -9,18 +9,12 @@ int SH_launch(char **args)
 	if (pid == 0)
 	{
 		if (execvp(args[0], args) == -1)
-		{
 			perror("SH");
-			exit(EXIT_FAILURE);
-		}
-		else if (pid < 0)
-		{
-			perror("SH");
-		}
-		else
-		{
-			wait(&status);
-		}
+		exit(EXIT_FAILURE);
 	}
+	else if (pid < 0)
+		perror("SH");
+	else
+		wait(&status);
 	return (1);
 }
