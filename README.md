@@ -1,12 +1,14 @@
-<h1> Introduction: </h1>
+<h1> 0x16.C-SIMPLE SHELL </h1>
+
+<h2> Introduction: </h2>
 	In this project is developed a simple UNIX command interpreter (shell)
 	as a part of the prtoamming foundation.
 
-<h1> Description: </h1>
+<h2> Description: </h2>
 	A simple UNIX command interpreter is a program that reads a commands forma the standar
 	input or files and execute them in order to display a result.
 
-<h1> Requirements: </h1>
+<h2> Requirements: </h2>
  General:
 
     Allowed editors: vi, vim, emacs
