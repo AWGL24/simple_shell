@@ -1,4 +1,9 @@
 #include "shell.h"
+
+/**
+ *env - creates the environment
+ *Return: success
+ */
 int env(void)
 {
 	int counter;
