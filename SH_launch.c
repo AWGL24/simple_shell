@@ -1,4 +1,12 @@
 #include "shell.h"
+
+/**
+ *SH_launch - This is the turn on of the shell.
+ *@args: It’s an array we’re the commands you want execvp to
+ * execute are stored.
+ *Return: success
+ */
+
 int SH_launch(char **args)
 {
 	pid_t pid;
