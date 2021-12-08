@@ -1,13 +1,13 @@
-.SH Introduction:
+<h1> Introduction: </h1>
 	In this project is developed a simple UNIX command interpreter (shell)
 	as a part of the prtoamming foundation.
 
-.SH Description:
+<h1> Description: </h1>
 	A simple UNIX command interpreter is a program that reads a commands forma the standar
 	input or files and execute them in order to display a result.
 
-.SH Requirements:
-.SM General:
+<h1> Requirements: </h1>
+ General:
 
     Allowed editors: vi, vim, emacs
     All your files will be compiled on Ubuntu 14.04 LTS
