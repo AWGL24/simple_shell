@@ -1,6 +1,13 @@
 #include "shell.h"
 #define SH_TOK_BUFSIZE 64
 #define SH_TOK_DELIM " \t\r\n\a"
+
+/**
+ *SH_splitline - this programs takes the userinput and divide them
+ *@line: is the input of the user.
+ *Return: tokens.
+ */
+
 char **SH_splitline(char *line)
 {
 	int bufsize = SH_TOK_BUFSIZE, position = 0;
