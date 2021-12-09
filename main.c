@@ -17,22 +17,22 @@ int main(int ac, char **av __attribute__((unused)), char **env)
 	do {
 		flag = check_isatty(flag);
 		input = userinput();
-		if (input == NULL)
+		user_input = split_string(input);
+		if (user_input[0] == NULL)
 			continue;
-		if (_strcmp(input, "exit") == 1)
+		if (_strcmp(user_input[0], "exit") == 1)
 		{
 			safe_free(&input);
 			memclean(path);
 			exit(0);
 		}
-		else if (_strcmp(input, "env") == 1)
+		else if (_strcmp(user_input[0], "env") == 1)
 		{
 			printenv(env, path);
 			safe_free(&input);
 		}
 		else
 		{
-			user_input = split_string(input);
 			input_validator(user_input, path);
 			safe_free(&input);
 			memclean(user_input);
