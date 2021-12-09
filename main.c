@@ -14,7 +14,7 @@ int main(char **env)
 	do {
 		flag = check_isatty(flag);
 		input = userinput();
-		if (!input)
+		if (input == NULL)
 			continue;
 		if (_strcmp(input, "exit") == 1)
 		{
