@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * main - executes the user input commands
+ * @env: enviroment
+ * Return: 0
+ */
 int main(char **env)
 {
 	int flag = 0;
