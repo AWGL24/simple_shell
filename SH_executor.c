@@ -16,7 +16,7 @@ void executor(char *full_PATH, char **user_input)
 		{
 			perror("not found");
 			memclean(user_input);
-			exit(127);
+			exit(EXIT_FAILURE);
 		}
 		safe_free(&full_PATH);
 		memclean(user_input);
