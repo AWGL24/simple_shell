@@ -20,15 +20,15 @@ int main(int ac, char **av __attribute__((unused)), char **env)
 		user_input = split_string(input);
 		if (user_input[0] == NULL)
 			continue;
-		if (_strcmp(user_input[0], "exit") == 1)
+		if (_strcmp(user_input[0], "exit") == 0)
 		{
 			safe_free(&input);
 			memclean(path);
-			exit(0);
+			exit(EXIT_SUCCESS);
 		}
-		else if (_strcmp(user_input[0], "env") == 1)
+		else if (_strcmp(user_input[0], "env") == 0)
 		{
-			printenv(env, path);
+			printenv();
 			safe_free(&input);
 		}
 		else
