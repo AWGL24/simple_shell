@@ -19,19 +19,14 @@ int _putchar(char c)
 
 char *_strcpy(char *dest, char *src)
 {
-	int len, i;
+	int idx, len;
 
-	len = 0;
+	len = _strlen(src);
 
-	while (src[len] != '\0')
+	for (idx = 0 ; idx <= len ; idx++)
 	{
-		len++;
+		dest[idx] = src[idx];
 	}
-	for (i = 0; i < len; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i - 1] = '\0';
 
 	return (dest);
 }
@@ -41,7 +36,7 @@ char *_strcpy(char *dest, char *src)
  *@s1: string 1
  *@s2: string 2
  *@n: number of bytes it compares
- *Return: 0 if function fails
+ *Return: 0 if strings are the same
  */
 
 int _strncmp(char *s1, char *s2, size_t n)
@@ -75,7 +70,7 @@ int _strlen(char *str)
 }
 
 /**
- *_strcmp - compresion of a string
+ *_strcmp - compares two strings
  *@s1: string 1
  *@s2: string 2
  *Return: success
@@ -83,7 +78,7 @@ int _strlen(char *str)
 
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int i = 0;
 
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
@@ -93,5 +88,5 @@ int _strcmp(char *s1, char *s2)
 		}
 		i++;
 	}
-	return (0);
+	return (s1[i] - s2[i]);
 }
