@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * executor - recieves user input and executes
+ * @user_input: array with name and executable
+ * @full_PATH: PATH with command
+ */
 void executor(char *full_PATH, char **user_input)
 {
 	int child;
