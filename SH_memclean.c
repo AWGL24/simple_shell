@@ -25,7 +25,9 @@ void memclean(char **array)
 void safe_free(char **ptr)
 {
 	if (*ptr == NULL)
+	{
 		return;
+	}
 	else
 	{
 		free(*ptr);
