@@ -6,11 +6,8 @@
  */
 char **PATH(char **environment)
 {
-	int idx;
-	int space = 2;
-	int lenght;
-	char *pathinput = NULL;
-	char *token = NULL;
+	int idx, space = 2, lenght;
+	char *pathinput = NULL, *token = NULL;
 	char **path = NULL;
 
 	for (idx = 0; environment[idx] != NULL; idx++)
@@ -18,31 +15,24 @@ char **PATH(char **environment)
 		if (_strncmp(environment[idx], "PATH", 4) == 0)
 			break;
 	}
-
 	pathinput = environment[idx];
-
 	for (idx = 0; pathinput[idx] != '\0'; idx++)
 	{
 		if (pathinput[idx] == ':')
 			space++;
 	}
-
 	path = malloc(sizeof(char *) * space);
 	if (!path)
 		return (NULL);
-
 	token = strtok(pathinput, "=");
 	space--;
-
 	for (idx = 0; idx < space; idx++)
 	{
 		token = strtok(NULL, ":");
 		lenght = _strlen(token);
-
 		path[idx] = malloc(sizeof(char) * (lenght + 1));
 		if (!path[idx])
 			return (NULL);
-
 		_strcpy(path[idx], token);
 	}
 	path[idx] = NULL;
