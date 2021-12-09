@@ -23,7 +23,7 @@ char **split_string(char *input)
 
 	array = malloc(sizeof(char *) * space);
 
-	if (!array)
+	if (array == NULL)
 		return (NULL);
 
 	token = strtok(input, " ");
@@ -33,10 +33,10 @@ char **split_string(char *input)
 		lenght = _strlen(token);
 		array[index] = malloc(sizeof(char) * (lenght + 1));
 
-		if (!array[index])
+		if (array[index] == NULL)
 			return (NULL);
 
-		_strcpy(array[index], token);
+		strcpy(array[index], token);
 		token = strtok(NULL, " ");
 	}
 	array[index] = NULL;
