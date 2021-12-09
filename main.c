@@ -1,15 +1,18 @@
 #include "shell.h"
 /**
  * main - executes the user input commands
+ * @ac: unused
+ * @av: unused
  * @env: enviroment
  * Return: 0
  */
-int main(char **env)
+int main(int ac, char **av __attribute__((unused)), char **env)
 {
 	int flag = 0;
 	char *input;
 	char **user_input = NULL;
 	char **path = PATH(env);
+	(void) ac;
 
 	do {
 		flag = check_isatty(flag);
