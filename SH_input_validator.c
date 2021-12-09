@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * input_validator - function that validates if user input is an executable
+ * @user_input: array with the xecutable names and args
+ * @PATH: array that contains the path
+ */
 void input_validator(char **user_input, char **PATH)
 {
 	struct stat st;
