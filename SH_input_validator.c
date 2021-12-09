@@ -10,7 +10,6 @@ void input_validator(char **user_input, char **PATH)
 	int idx;
 	char *full_path, *concat;
 
-	printf("<%s>", user_input[0]);
 	if (stat(user_input[0], &st) != 0)
 	{
 		for (idx = 0; PATH[idx] != NULL; idx++)
