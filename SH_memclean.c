@@ -13,6 +13,7 @@ void memclean(char **array)
 	{
 		free(array[index]);
 		array[index] = NULL;
+		index++;
 	}
 	free(array);
 }
@@ -23,7 +24,7 @@ void memclean(char **array)
  */
 void safe_free(char **ptr)
 {
-	if (!ptr)
+	if (*ptr == NULL)
 		return;
 	else
 	{
