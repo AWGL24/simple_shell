@@ -9,6 +9,8 @@
 #include <signal.h>
 #include <string.h>
 
+extern char **environ;
+
 int _putchar(char c);
 int check_space(char *input);
 void safe_free(char **ptr);
@@ -20,7 +22,7 @@ char **PATH(char **environment);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *str);
 char **split_string(char *input);
-void printenv(char **env, char **PATH);
+int printenv(void);
 int _strcmp(char *s1, char *s2);
 int _strncmp(char *s1, char *s2, size_t n);
 char *userinput(void);
