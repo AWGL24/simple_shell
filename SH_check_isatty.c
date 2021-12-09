@@ -1,6 +1,7 @@
 #include "shell.h"
 /**
- * check_isatty - function that checks for interactive and non-interactive shell
+ * check_isatty - function that checks for interactive
+ * and non-interactive shell
  * @flag: turns off flag
  * Return: return on or off
  */
