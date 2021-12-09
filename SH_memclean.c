@@ -1,34 +1,30 @@
 #include "shell.h"
-
 /**
- *memclean - function to clean the memory
- *@array: Array to be evaluated and free.
- *Return: success
+ * memclean - function that frees up mem
+ * @array: array that will be freed
  */
-
 void memclean(char **array)
 {
-	int i;
+	int index;
 
-	for (i = 0; array[i] != NULL; i++)
+	index = 0;
+
+	while (array[index] != NULL)
 	{
-		free(array[i]);
-		array[i] = NULL;
+		free(array[index]);
+		array[index] = NULL;
 	}
 	free(array);
 }
 
 /**
- *safe_free - free the pointer
- * @ptr: pointer
+ * safe_free - function that frees including NULL
+ * @ptr: element to be freed
  */
-
 void safe_free(char **ptr)
 {
-	if (*ptr == NULL)
-	{
+	if (!ptr)
 		return;
-	}
 	else
 	{
 		free(*ptr);

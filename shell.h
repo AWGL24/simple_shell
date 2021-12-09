@@ -3,28 +3,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-#include <string.h>
+#include <sys/types.h>
 #include <signal.h>
-typedef struct builtins {
-  char *cm;
-  char *dir;
-} builtin;
-extern char **environ;
-extern void free (void *__ptr) __THROW;
-char *userinput(void);
-int _strlen(char *str);
-char *_strcpy(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
-int SH_exit(char **args);
-int SH_launch(char **args);
-int SH_execute(char **args);
-int env(void);
-char **SH_splitline(char *line);
-void _puts(char *str);
+#include <string.h>
+
 int _putchar(char c);
+int check_space(char *input);
 void safe_free(char **ptr);
 void memclean(char **array);
-#endif /* SHELL_H */
+void executor(char *full_PATH, char **user_input);
+char *concatenator(char *PATH, char *input);
+void input_validator(char **user_input, char **PATH);
+char **PATH(char **environment);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *str);
+char **split_string(char *input);
+void printenv(char **env, char **PATH);
+int _strcmp(char *s1, char *s2);
+int _strncmp(char *s1, char *s2, size_t n);
+char *userinput(void);
+int check_isatty(int flag);
+
+#endif

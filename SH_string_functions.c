@@ -1,16 +1,13 @@
 #include "shell.h"
-
 /**
- *_puts - putchar function
- *@str: a pointer to a string
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-void _puts(char *str)
+int _putchar(char c)
 {
-	while (*str)
-		_putchar (*str++);
-
-	_putchar('\n');
+	return (write(1, &c, 1));
 }
 
 /**
@@ -40,6 +37,44 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
+ *_strncmp - compares two strings
+ *@s1: string 1
+ *@s2: string 2
+ *@n: number of bytes it compares
+ *Return: 0 if function fails
+ */
+
+int _strncmp(char *s1, char *s2, size_t n)
+{
+	size_t i;
+
+	i = 0;
+
+	while (i < n && (s1[i] == s2[i]) && s1[i] != '\0')
+	{
+		i++;
+		n--;
+	}
+	return (s1[i] - s2[i]);
+}
+
+/**
+ *_strlen - length of a string
+ *@str: string
+ *Return: success
+ */
+
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (*str++)
+		len++;
+
+	return (len);
+}
+
+/**
  *_strcmp - compresion of a string
  *@s1: string 1
  *@s2: string 2
@@ -59,20 +94,4 @@ int _strcmp(char *s1, char *s2)
 		i++;
 	}
 	return (0);
-}
-
-/**
- *_strlen - length of a string
- *@str: string
- *Return: success
- */
-
-int _strlen(char *str)
-{
-	int len = 0;
-
-	while (*str++)
-		len++;
-
-	return (len);
 }

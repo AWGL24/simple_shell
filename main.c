@@ -1,24 +1,36 @@
 #include "shell.h"
-
-/**
- *main - Program works based on the user input of the user
- *Return: EXIT_SUCCESS
- */
-
-int main(void)
+int main(char **env)
 {
-	char *str;
-	char **strcm;
-	int stat;
+	int flag = 0;
+	char *input;
+	char **user_input = NULL;
+	char **path = PATH(env);
 
 	do {
-		write(1, "~$ ", 3);
-		str = userinput();
-		strcm = SH_splitline(str);
-		stat = SH_execute(strcm);
-		free(str);
-		free(strcm);
-	} while (stat);
-
-	return (EXIT_SUCCESS);
+		flag = check_isatty(flag);
+		input = userinput();
+		if (!input)
+			continue;
+		if (_strcmp(input, "exit") == 1)
+		{
+			safe_free(&input);
+			memclean(path);
+			exit(0);
+		}
+		else if (_strcmp(input, "env") == 1)
+		{
+			printenv(env, path);
+			safe_free(&input);
+		}
+		else
+		{
+			user_input = split_string(input);
+			input_validator(user_input, path);
+			safe_free(&input);
+			memclean(user_input);
+		}
+		if (flag == 0)
+			memclean(path);
+	} while (flag);
+	return (0);
 }
