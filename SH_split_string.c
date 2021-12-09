@@ -36,7 +36,7 @@ char **split_string(char *input)
 		if (array[index] == NULL)
 			return (NULL);
 
-		strcpy(array[index], token);
+		_strcpy(array[index], token);
 		token = strtok(NULL, " ");
 	}
 	array[index] = NULL;
