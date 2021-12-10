@@ -7,7 +7,7 @@
 	as a part of the programming foundation.
 
 <h2> Description: </h2>
-	A simple UNIX command interpreter is a program that reads a commands forma the standar
+	A simple UNIX command interpreter is a program that reads commands from the standard
 	input or files and execute them in order to display a result.
 
 <h2> Requirements: </h2>
