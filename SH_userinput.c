@@ -11,6 +11,11 @@ char *userinput(void)
 	int len = 0;
 
 	len = getline(&input, &size, stdin);
+	if (len == EOF)
+	{
+		free(input);
+		exit(EXIT_FAILURE);
+	}
 	input[len - 1] = '\0';
 	if (check_space(input) == 1)
 	{
