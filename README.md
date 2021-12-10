@@ -1,4 +1,4 @@
-<h1 align="center"> C16 - Simple Shell </h1>
+<h1 align="center"> C16 - Simple Shell Proyect </h1>
 
 ![alt text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)
 
