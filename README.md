@@ -1,4 +1,6 @@
-<h1> 0x16.C-SIMPLE SHELL </h1>
+<h1 align="center"> C16 - Simple Shell </h1>
+
+![alt text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)
 
 <h2> Introduction: </h2>
 	In this project is developed a simple UNIX command interpreter (shell)
