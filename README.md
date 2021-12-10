@@ -24,3 +24,8 @@
     All your header files should be include guarded
     Use system calls only when you need to
 
+<h2> Authors: </h2>
+Made by:
+
+  Andrew Gonzalez
+  Jose Fabre
