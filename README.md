@@ -24,8 +24,6 @@
     All your header files should be include guarded
     Use system calls only when you need to
 
-<h2> Authors: </h2>
-Made by:
+<p align="center"> AUTHORS </p>
 
-  Andrew Gonzalez
-  Jose Fabre
+<h3 align="center"> Made by Andrew Gonzalez and Jose Fabre. </h3>
