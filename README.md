@@ -4,7 +4,7 @@
 
 <h2> Introduction: </h2>
 	In this project is developed a simple UNIX command interpreter (shell)
-	as a part of the prtoamming foundation.
+	as a part of the programming foundation.
 
 <h2> Description: </h2>
 	A simple UNIX command interpreter is a program that reads a commands forma the standar
