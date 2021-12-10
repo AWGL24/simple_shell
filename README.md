@@ -26,4 +26,4 @@
 
 <h3 align="center"> AUTHORS </h3>
 
-<p align="center"> Made by Andrew Gonzalez and Jose Fabre. </p>
+<h3 align="center"> Made by Andrew Gonzalez and Jose Fabre. </h3>
